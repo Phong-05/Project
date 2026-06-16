@@ -1,0 +1,30 @@
+{C:/Users/phuon/Documents/Questa VHDL project/Elevator 2/elevator_tb.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/phuon/Documents/Questa VHDL project/Elevator 2/elevator_tb.vhd}
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity elevator_tb
+-- Compiling architecture behavior of elevator_tb
+-- Loading entity elevator_controller
+
+} {} {}} {C:/Users/phuon/Documents/Questa VHDL project/Elevator 2/seven_segment_decoder.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/phuon/Documents/Questa VHDL project/Elevator 2/seven_segment_decoder.vhd}
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity seven_segment_decoder
+-- Compiling architecture behavioral of seven_segment_decoder
+
+} {} {}} {C:/Users/phuon/Documents/Questa VHDL project/Elevator 2/elevator_controller.vhd} {1 {vcom -work work -2002 -explicit -vopt -stats=none {C:/Users/phuon/Documents/Questa VHDL project/Elevator 2/elevator_controller.vhd}
+Questa Intel Starter FPGA Edition-64 vcom 2024.3 Compiler 2024.09 Sep 10 2024
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity elevator_controller
+-- Compiling architecture Behavioral of elevator_controller
+
+} {} {}}

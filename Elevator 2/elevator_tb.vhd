@@ -1,0 +1,69 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.NUMERIC_STD.ALL;
+
+entity elevator_tb is
+end elevator_tb;
+
+architecture behavior of elevator_tb is
+    signal clk            : std_logic := '0';
+    signal reset          : std_logic := '1';
+    signal call           : std_logic_vector(9 downto 0) := (others => '0');  -- 10 t?ng (0-9)
+    signal floor_sensor   : std_logic_vector(9 downto 0) := (others => '0');  -- 10 t?ng (0-9)
+    signal motor_up       : std_logic;
+    signal motor_down     : std_logic;
+    signal door_open      : std_logic;
+    signal door_close     : std_logic;
+    signal current_floor  : std_logic_vector(3 downto 0);
+
+    constant clk_period : time := 10 ns;
+
+begin
+    -- Clock process
+    clk_process : process
+    begin
+        while true loop
+            clk <= '0';
+            wait for clk_period / 2;
+            clk <= '1';
+            wait for clk_period / 2;
+        end loop;
+    end process;
+
+    -- Unit under test
+    uut: entity work.elevator_controller
+        port map (
+            clk => clk,
+            reset => reset,
+            call => call,
+            floor_sensor => floor_sensor,
+            motor_up => motor_up,
+            motor_down => motor_down,
+            door_open => door_open,
+            door_close => door_close,
+            current_floor => current_floor
+        );
+
+    -- Test process
+    stim_proc: process
+    begin
+        wait for 20 ns;
+        reset <= '0';
+
+        call(9) <= '1';
+        wait for 100 ns;
+        call(9) <= '0';
+
+        for i in 0 to 9 loop
+            wait for 100 ns;
+            floor_sensor(i) <= '1';
+            wait for 10 ns;
+            floor_sensor(i) <= '0';
+
+            wait for 100 ns;
+
+            wait for 100 ns;
+        end loop;
+        wait;
+    end process;
+end behavior;

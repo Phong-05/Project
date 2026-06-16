@@ -1,0 +1,8 @@
+vlib work
+vmap work work
+vcom elevator_controller.vhd
+vcom seven_segment_decoder.vhd
+vcom elevator_tb.vhd
+vsim work.elevator_tb
+add wave *
+run 100 ms
